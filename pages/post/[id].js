@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import PostPage from '../../components/postPage'
-import { useRouter } from 'next/router'
+
 
 
 export const getStaticPaths = async () => {

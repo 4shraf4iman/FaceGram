@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import NavBarMain from '../components/navBarMain'
-import { useDispatch, useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
 import { loginAuth } from '../redux/actions/loginAction'
 import { TYPES } from '../redux/actions/types'
 import Loading from '../components/loading'
+import { useDispatch, useSelector } from 'react-redux'
+
 import Head from "next/head"
 
 const App = () => {
@@ -48,7 +49,7 @@ const App = () => {
                 <form className="" onSubmit={handleSubmit}>
                     <p className='login-title text-align-center'>Login</p>
                     <div className="mb-3 ">
-                        <div><label >Username </label></div>
+                        <div><label >Username (*admin) </label></div>
 
 
                         <input value={input.username} onChange={e => inputUsername(e.target.value)}  />
@@ -58,7 +59,7 @@ const App = () => {
                         }
                     </div>
                     <div className="mb-3">
-                        <div><label htmlFor="exampleInputPassword1" className="form-label">Password </label></div>
+                        <div><label htmlFor="exampleInputPassword1" className="form-label">Password (*admin) </label></div>
                         <input value={input.password} onChange={e => inputPassword(e.target.value)} type="password" id="exampleInputPassword1"/>
                     </div>
                     <div className=''><button type="submit" >Submit</button></div>

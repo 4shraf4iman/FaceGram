@@ -469,7 +469,6 @@ const PostPage = ({ post  })=>{
 
 
 
-
 const getStaticPaths = async ()=>{
     const res = await external_axios_default().get(`https://jsonplaceholder.typicode.com/posts`);
     const posts = res.data;
